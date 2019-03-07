@@ -3,8 +3,6 @@ package com.chutzpah.mvvmdemo.base;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.chutzpah.mvvmdemo.model.LoginBean;
-
 /**
  * Created by xiaowu on 2019/03/07.
  */
@@ -40,7 +38,7 @@ public class State<T> {
     public static <T> State<T> error(String msg,T t) {
         return new State<>(1, t, msg);
     }
-    
+
 
 
     public static <T> State<T> loading() {

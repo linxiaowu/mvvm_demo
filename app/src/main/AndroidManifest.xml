@@ -15,7 +15,7 @@
         <activity android:name=".MainActivity"/>
 
 
-        <activity android:name=".view.LoginActivity">
+        <activity android:name=".login.view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

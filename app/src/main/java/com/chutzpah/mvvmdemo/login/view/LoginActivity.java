@@ -1,4 +1,4 @@
-package com.chutzpah.mvvmdemo.view;
+package com.chutzpah.mvvmdemo.login.view;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -12,8 +12,8 @@ import com.chutzpah.mvvmdemo.R;
 import com.chutzpah.mvvmdemo.base.LoadingDialog;
 import com.chutzpah.mvvmdemo.base.State;
 import com.chutzpah.mvvmdemo.databinding.ActivityLoginBinding;
-import com.chutzpah.mvvmdemo.model.LoginBean;
-import com.chutzpah.mvvmdemo.vm.LoginVM;
+import com.chutzpah.mvvmdemo.login.model.LoginBean;
+import com.chutzpah.mvvmdemo.login.vm.LoginVM;
 
 /**
  * @author xiaowu

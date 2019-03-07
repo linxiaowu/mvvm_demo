@@ -1,4 +1,4 @@
-package com.chutzpah.mvvmdemo.vm;
+package com.chutzpah.mvvmdemo.login.vm;
 
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.util.Log;
 
 import com.chutzpah.mvvmdemo.base.State;
-import com.chutzpah.mvvmdemo.model.LoginBean;
+import com.chutzpah.mvvmdemo.login.model.LoginBean;
 
 
 /**
@@ -49,7 +49,7 @@ public class LoginVM extends ViewModel {
         //先 loading
         loginLiveData.setValue(State.<LoginBean>loading());
 
-        //模拟耗时网络请求
+        //模拟耗时网络请求,这部分可以放在 model 的 biz
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

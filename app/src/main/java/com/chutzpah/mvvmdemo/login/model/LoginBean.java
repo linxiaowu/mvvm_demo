@@ -1,4 +1,4 @@
-package com.chutzpah.mvvmdemo.model;
+package com.chutzpah.mvvmdemo.login.model;
 
 /**
  * Created by xiaowu on 2019/03/07.
