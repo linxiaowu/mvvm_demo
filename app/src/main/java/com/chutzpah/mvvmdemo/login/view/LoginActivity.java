@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.chutzpah.mvvmdemo.R;
 import com.chutzpah.mvvmdemo.base.LoadingDialog;
 import com.chutzpah.mvvmdemo.base.State;
+import com.chutzpah.mvvmdemo.book.view.BookListActivity;
 import com.chutzpah.mvvmdemo.databinding.ActivityLoginBinding;
 import com.chutzpah.mvvmdemo.login.model.LoginBean;
 import com.chutzpah.mvvmdemo.login.vm.LoginVM;
@@ -56,7 +57,14 @@ public class LoginActivity extends AppCompatActivity {
 
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
 
-                        //TODO 携带数据跳转到列表页
+                        //可以携带携带数据跳转到列表页，可以调用 startActivityForResult 等
+                        //若是放在 vm 不合适，
+                        //1. context 无法使用 startActivityForResult
+                        //2. vm 持有 context 可能会导致内存泄露
+                        //3. vm 越少知道 android 包下的东西越有利于跑单元测试
+
+                        startActivity(BookListActivity.prepareIntent(loginBeanState.getData().getUserId(),
+                                LoginActivity.this));
 
                         break;
                     case State.ERROR:
